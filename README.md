@@ -3,8 +3,17 @@
 * Since this is a maven project. Hence, you need to clone this project and import it in eclipse.  
 
 ### Steps to Clone
-**Step 1:** Open git bash in your desired location.  
-**Step 2:** Execute command: git clone https://github.com/kunalchand/NRIFT-Selenium.git  
+**Step 1:** Open git bash in your desired location.    
+
+![gitBash](https://i.ibb.co/RSHfMWp/image.png)         
+
+**Step 2:** Execute command: "git clone https://github.com/kunalchand/NRIFT-Selenium.git"  
+
+![executeCommand](https://i.ibb.co/mBmFSpd/image.png)     
+
+**Step 3:** You should see a green tick on a newly created folder "NRIFT-Selenium"     
+
+![greenTickOnFolder](https://i.ibb.co/Dk98nLB/image.png)     
 
 ### Steps to Import an existing maven project in eclipse
 **Step 1:** Right click on the Project Explorer and click on "Import"  
