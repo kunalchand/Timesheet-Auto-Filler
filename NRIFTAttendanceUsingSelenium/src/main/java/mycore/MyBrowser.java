@@ -3,8 +3,6 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.Set;
-
 import org.openqa.selenium.WebDriver;
 
 public class MyBrowser {
