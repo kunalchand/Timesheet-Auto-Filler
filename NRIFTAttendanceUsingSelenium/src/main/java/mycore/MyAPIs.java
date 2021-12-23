@@ -31,9 +31,9 @@ public class MyAPIs {
 		MyAPIs.leaves = leaves;
 	}
 
-	public WebDriver openAttendancePortal()
+	public WebDriver openAttendancePortal(String driverPath)
 	{
-		System.setProperty("webdriver.chrome.driver", "D:\\SMTAM-CodeBase\\RCN\\smtam-eclipse-workspace\\AttendanceUsingSelenium\\drivers\\chromedriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", driverPath);
 		WebDriver driver = new ChromeDriver();
 		driver.get(MyConstants.AttendancePortalLink);
 		return driver;
