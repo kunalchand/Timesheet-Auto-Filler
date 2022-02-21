@@ -55,14 +55,16 @@
 
 ![leaves](https://i.ibb.co/sybbg7J/image.png)     
 
-##### NOTE: The dates you specify for leaves must be a String and must follow only one format: "dd MMMM yyyy" ie. "03 January 2021". Any spelling mistake WON'T crash the application. It would simply ignore the incorrect date that you specified.    
+##### NOTE: The dates you specify for leaves must be a String and must follow only one format: "dd MMMM yyyy" eg. "03 January 2021". Any spelling mistake WON'T crash the application. It would simply IGNORE the incorrect date that you specified.    
 
 eg. myAPIs.setLeaves(new HashSet<String>(Arrays.asList("16 December 2021", "7 December 2021", "30 Nov 2021", "03 January 2021", "29 February 2022")));     
 * 2nd, 3rd & 5th parameter of leave are mentioned in incorret format.    
 * "7 December 2021" should be "**0**7 December 2021"   
 * "30 Nov 2021" should be "30 **November** 2021"    
-* "29 February 2022" date doesn't exists
+* "29 February 2022" date doesn't exists            
 
+And in case you don't have any leaves to specify, you can mention an empty string inside the HashSet. ie. "**myAPIs.setLeaves(new HashSet<String>(Arrays.asList("")));**" In this scenario, NO date will be skipped.         
+      
 **Step 7:** Specify the Sign In Time, Sign Out Time and the path for Log file:      
 * Even if you don't specify the correct path, the application **WON'T** crash. Remember, applying attendance is given more priority than logging the dates on which attendance was successfully applied.             
 * "08:30" is an example of Sign In Time. And "18:30" is an example of Sign Out Time.     
