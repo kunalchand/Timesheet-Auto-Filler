@@ -35,11 +35,11 @@
 
 ### Steps to Set up the project
 **Step 1:** Open "MyBrowser.java" file. This is where you have to modify few things.    
-**Step 2:** Right click on "chromedriver.exe" and click on "Properties"        
+**Step 2:** Right click on "chromedriver.exe" (Choose the appropriate version for your browser. Currenlty "chromedriver_V98.exe" works perfectly with my browser) and click on "Properties"        
 
 ![properties](https://i.ibb.co/42K57yd/image.png)     
 
-**Step 3:** Right click on "chromedriver.exe" and click on "Properties" and copy the FULL path           
+**Step 3:** Copy the FULL path           
 
 ![FullPath](https://i.ibb.co/nb5fZLC/image.png)
 
