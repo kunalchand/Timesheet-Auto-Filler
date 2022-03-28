@@ -49,7 +49,7 @@ public class MyAPIs {
 	}
 	public void setDateTimeAndApplyWithTodaysDate(WebDriver driver, String signInTime, String signOutTime, String logFilePath) throws InterruptedException, ParseException, IOException
 	{
-		setDateTimeAndApplyWithAnyDate(driver, getTodaysDate(), getTodaysMonth(), getTodaysYear(), "08:30", "18:30", "C:\\Log.txt");
+		setDateTimeAndApplyWithAnyDate(driver, getTodaysDate(), getTodaysMonth(), getTodaysYear(), signInTime, signOutTime, logFilePath);
 	}
 	
 	public void setDateTimeAndApplyWithAnyDate(WebDriver driver, String presentDay, String presentMonth, String presentYear, String signInTime, String signOutTime, String logFilePath) throws InterruptedException, ParseException, IOException
