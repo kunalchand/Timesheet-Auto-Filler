@@ -22,6 +22,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class MyAPIs {
 	
 	private static Set<String> leaves = new HashSet<String>();
+	public static MyLogger myLogger;
 	
 //	public Set<String> getLeaves() {
 //		return leaves;
@@ -54,7 +55,7 @@ public class MyAPIs {
 	
 	public void setDateTimeAndApplyWithAnyDate(WebDriver driver, String presentDay, String presentMonth, String presentYear, String signInTime, String signOutTime, String logFilePath) throws InterruptedException, ParseException, IOException
 	{
-		MyLogger myLogger = new MyLogger(logFilePath);
+		myLogger = new MyLogger(logFilePath);
 		try{
 			myLogger.logger.setLevel(Level.INFO);
 		}catch(Exception e) {
@@ -78,7 +79,7 @@ public class MyAPIs {
 			findAndClick(driver, MyConstants.ApplyButtonId);
 			
 			Thread.sleep(400);
-			logSucess(myLogger, getStatusHeader(driver), getStatusMessage(driver), previousDay, previousMonth, previousYear);
+			logSucess(getStatusHeader(driver), getStatusMessage(driver), previousDay, previousMonth, previousYear);
 			
 			status = getStatusMessage(driver).equals(MyConstants.ExistsAlready);
 			Thread.sleep(300);
@@ -131,7 +132,7 @@ public class MyAPIs {
 		}
 	}
 	
-	public static void logSucess(MyLogger myLogger, String statusHeader, String statusMessage, String Day, String Month, String Year) throws ParseException
+	public static void logSucess(String statusHeader, String statusMessage, String Day, String Month, String Year) throws ParseException
 	{
 		try {
 		if(statusHeader.equals(MyConstants.Success))
@@ -345,9 +346,19 @@ public class MyAPIs {
 		String previousMonth = previousDateInString[1];
 		String previousYear = previousDateInString[2];
 		previousDateInString = checkWeekend(previousDay, previousMonth, previousYear) ? getPreviousDate(previousDay, previousMonth, previousYear) : previousDateInString;
-		previousDateInString = checkLeave(previousDay, previousMonth, previousYear) ? getPreviousDate(previousDay, previousMonth, previousYear) : previousDateInString;
+		previousDateInString = checkLeave(previousDay, previousMonth, previousYear) ? logSkippedLeaveAndGetPreviousDate(previousDay, previousMonth, previousYear) : previousDateInString;
 		
 		return previousDateInString;
+	}
+	
+	public static String[] logSkippedLeaveAndGetPreviousDate(String givenDay, String givenMonth, String givenYear) throws ParseException
+	{
+		try {
+			myLogger.logger.info("Skipped a day due to leave on: " + generateFullDate(givenDay, givenMonth, givenYear));
+		}catch(Exception e){
+			//In case of any exception, stop logging the data
+		}
+		return getPreviousDate(givenDay, givenMonth, givenYear);
 	}
 	
 	public static boolean checkLeave(String givenDay, String givenMonth, String givenYear)
