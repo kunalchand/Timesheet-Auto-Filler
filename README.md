@@ -43,17 +43,17 @@
 
 ![FullPath](https://i.ibb.co/nb5fZLC/image.png)
 
-**Step 4:** Paste the copied link in the parameter of openAttendancePortal("*parameter*") line highlighted in the picture below:     
+**Step 4:** Paste the copied link in the parameter of openAttendancePortal("*parameter*") line highlighted in the picture below:
 
-![PasteFullPath](https://i.ibb.co/0Ync8xr/image.png)     
+![PasteFullPath](https://user-images.githubusercontent.com/25904232/160552695-5b40fccc-8421-4d16-9555-1fd496e3097d.png)                    
 
 **Step 5:** Change your username and password:     
 
 ![ChangeUsername&Password](https://i.ibb.co/XbSJRhD/image.png)      
 
-**Step 6:** You can add or modify dates going inside the HashSet. Basically these days will be skipped and attendance won't be applied on the days you mentioned.     
+**Step 6:** You can add or modify dates going inside the HashSet. Basically these days will be skipped and attendance won't be applied on the days you mentioned. The skipped days will get logged in the log file if you specify the path correctly (log file path setup is explained in Step 7).     
 
-![leaves](https://i.ibb.co/sybbg7J/image.png)     
+![leaves](https://user-images.githubusercontent.com/25904232/160553144-84b16ebd-9a13-4054-8ff2-30ac4c63324a.png)                  
 
 ##### NOTE: The dates you specify for leaves must be a String and must follow only one format: "dd MMMM yyyy" eg. "03 January 2021". Any spelling mistake WON'T crash the application. It would simply IGNORE the incorrect date that you specified.    
 
