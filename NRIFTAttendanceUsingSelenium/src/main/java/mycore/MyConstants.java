@@ -26,6 +26,7 @@ public class MyConstants {
     public static final String AppliedAlready = "Attandance already applied for the specified date !!";
     public static final String HolidayOrWeekend = "Reason is mandatory for holidays & weekends when regularization type is Work_From_Home_Temporary_Basis !!";
     public static final String FutureApplyError = "Regularization can only be applied on past date !!";
+    public static final String IncorrectFinancialYear = "You can only apply regularization for current financial year !!";
     public static final String Error = "Error:";
     public static final String Success = "Success:";
 }

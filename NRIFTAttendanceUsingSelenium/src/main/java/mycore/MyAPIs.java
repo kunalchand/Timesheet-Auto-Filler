@@ -81,7 +81,7 @@ public class MyAPIs {
 			Thread.sleep(400);
 			logSucess(getStatusHeader(driver), getStatusMessage(driver), previousDay, previousMonth, previousYear);
 			
-			status = getStatusMessage(driver).equals(MyConstants.ExistsAlready);
+			status = getStatusMessage(driver).equals(MyConstants.ExistsAlready) || getStatusMessage(driver).equals(MyConstants.IncorrectFinancialYear);
 			Thread.sleep(300);
 			closeStatusBox(driver);
 			Thread.sleep(350);
