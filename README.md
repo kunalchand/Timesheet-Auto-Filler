@@ -1,4 +1,4 @@
-# Timesheet-Auto-Filler
+# Timesheet Auto Filler
 * Applying attendance in NRIFT Attendance portal is now automated using Selenium!
 * Using this tool you can apply attendance to all the pending days with just a single click.
 * Since this is a maven project. Hence, you need to clone this project and import it in eclipse.  
